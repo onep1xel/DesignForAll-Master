@@ -373,6 +373,32 @@ body,
 	box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
 }
 
+
+/* light blue */
+.bkg-light-blue{
+	background-color: #53c3e8;
+	border-color: #53c3e8;
+}
+.bkg-hover-light-blue:hover{
+	background-color: #53c3e8;
+	border-color: #53c3e8;
+}
+.border-hover-light-blue:hover{
+	border-color: #53c3e8;
+}
+.color-light-blue,
+.color-hover-light-blue:hover{
+	color: #53c3e8;
+}
+
+
+
+
+
+
+
+
+
 /* grey ultralight */
 .bkg-grey-ultralight{
 	background-color: #f8f8f8;
