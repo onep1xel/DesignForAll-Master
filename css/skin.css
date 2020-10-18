@@ -741,12 +741,12 @@ body,
 
 /* Initial Logo Width */
 .header .logo{
-	width: 9rem;
+	width: 20rem;
 }
 
 /* Compacted Header Logo Width */
 .header-compact .logo{
-	width: 7rem;
+	width: 20rem;
 }
 
 /* Initial Logo Styling */
@@ -847,7 +847,7 @@ body,
 	margin: 0 1.5rem;
 	padding-left: 0;
 	padding-right: 0;
-	font-size: 1.1rem;
+	font-size: 1.4rem;
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 0.1rem;
