@@ -61,6 +61,8 @@ textarea,
 select{
 	font-family: 'faustina', 'georgia', serif;
 }
+
+
 h1,
 h2,
 h3,
@@ -83,6 +85,7 @@ button,
 	font-family: 'inter', 'Helvetica Neue', 'Helvetica', sans-serif;
 }
 
+
 /* Titles */
 h1,.h1,
 h2,.h2,
@@ -95,6 +98,7 @@ h6,.h6{
 	text-transform: none;
 	color: #33363a;
 }
+
 h1 a:hover,
 h2 a:hover,
 h3 a:hover,
@@ -110,10 +114,10 @@ h2,.h2{
 	font-size: 3.3rem;
 }
 h3,.h3{
-	font-size: 2.3rem;
+	font-size: 2.6rem;
 }
 h4,.h4{
-	font-size: 1.8rem;
+	font-size: 2.2rem;
 }
 h5,.h5{
 	font-size: 1.6rem;
@@ -229,6 +233,7 @@ blockquote{
 	font-family: 'faustina', 'Georgia', serif;
 }
 .title-large{
+	font-family: 'antique-olive', 'inter', 'Helvetica Neue', 'Helvetica', sans-serif;
 	font-size: 6.4rem;
 	line-height: 1;
 }
@@ -244,8 +249,8 @@ blockquote{
 /* Text Classes */
 .text-xlarge{
 	font-size: 2.6rem;
-	font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', 'Helvetica', sans-serif;
-	font-weight:800;
+	font-family: 'inter', 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-weight: 700;
 }
 
 .text-large{
@@ -307,7 +312,7 @@ blockquote{
 
 	/* Lead */
 	.lead{
-		font-size: 1.7rem;
+		font-size: 2.0rem;
 	}
 
 	/* Text Classes */
@@ -315,7 +320,7 @@ blockquote{
 		font-size: 2rem;
 	}
 	.text-large{
-		font-size: 1.7rem;
+		font-size: 1.9rem;
 	}
 	.text-medium{
 		font-size: 1.4rem;
