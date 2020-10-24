@@ -48,7 +48,7 @@ Copyright: ThemeMountain
 body{
 	letter-spacing: 0;
 	font-weight: 400;
-	font-size: 1.4rem;
+	font-size: 2.2rem;
 	line-height: 1.8;
 	color: #6c6f73;
 	font-family: 'faustina', 'georgia', serif;
@@ -59,6 +59,8 @@ body,
 input,
 textarea,
 select{
+	font-size: 2.2rem;
+	line-height: 1.8;
 	font-family: 'faustina', 'georgia', serif;
 }
 
@@ -400,6 +402,22 @@ body,
 
 
 
+/* Sun */
+.bkg-sun{
+	background-color: #e9ca00;
+	border-color: #e9ca00;
+}
+.bkg-hover-sun:hover{
+	background-color: #e9ca00;
+	border-color: #e9ca00;
+}
+.border-hover-sun:hover{
+	border-color: #e9ca00;
+}
+.color-sun,
+.color-hover-sun:hover{
+	color: #e9ca00;
+}
 
 
 
@@ -510,20 +528,20 @@ body,
 
 /* theme */
 .bkg-theme{
-	background-color: #33363a;
-	border-color: #33363a;
+	background-color: #102039;
+	border-color: #102039;
 }
 .bkg-hover-theme:hover{
-	background-color: #33363a;
-	border-color: #33363a;
+	background-color: #102039;
+	border-color: #102039;
 }
 .border-theme,
 .border-hover-theme:hover{
-	border-color: #33363a;
+	border-color: #102039;
 }
 .color-theme,
 .color-hover-theme:hover{
-	color: #33363a;
+	color: #102039;
 }
 
 /*------------------------------------------------------------------
@@ -867,7 +885,7 @@ body,
 .header .navigation > ul > li > a:hover{
 	color: #33363a;
 	opacity: 1;
-}
+	}
 .header .navigation > ul > li.current > a:hover{
 	color: #33363a;
 }
@@ -3918,9 +3936,8 @@ blockquote cite{
 	background-color: #f4f4f4;
 	border-color: #f4f4f4;
 	color: #969aa1;
-	font-size: 1.1rem;
+	font-size: 2.2rem;
 	font-weight: 400;
-	text-transform: uppercase;
 }
 .accordion > ul > li.active > a,
 .accordion > ul > li.active > a:hover{
@@ -3966,7 +3983,7 @@ blockquote cite{
 .accordion.style-2 > ul > li.active > a:hover{
 	background-color: transparent;
 	border-color: transparent;
-	color: #2bada4;
+	color: #c9a021;
 }
 .accordion.style-2 .accordion-content{
 	padding: 1rem 0 3rem 0;
