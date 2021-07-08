@@ -1291,10 +1291,10 @@ body,
 .side-navigation > ul > li > a{
 	padding: 0 1rem;
 	display: inline;
-	font-size: 4rem;
-	line-height: 1.2;
+	font-size: 1.6rem;
+	line-height: 1.4;
 	letter-spacing: 0;
-	text-transform: uppercase;
+	text-transform: none;
 	font-weight: 700;
 	color: #999;
 	position: relative;
@@ -1313,7 +1313,7 @@ body,
 	color: #33363a;
 }
 .one-page-nav .side-navigation > ul > li > a{
-	padding: 0 4rem;
+	padding: 0 2rem;
 	font-size: 3rem;
 }
 
