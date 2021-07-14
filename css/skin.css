@@ -632,9 +632,9 @@ body,
 
 /* Header Initial Styling */
 .header .header-inner{
-	background-color: #fff;
+	background-color: #002d40;
 	border-bottom: none;
-	border-bottom: 1px solid #eee;
+	/*border-bottom: 1px solid #eee;*/
 }
 .header.no-border .header-inner{
 	border-bottom: 1px solid transparent;
@@ -661,7 +661,7 @@ body,
 
 /* Background Header - On Scroll! */
 .header-background .header-inner{
-	background-color: #fff;
+	background-color: #002d40;
 }
 .header-background.with-shadow .header-inner{
 	box-shadow: 0 0 3rem 0 rgba(0,0,0,0.1);
@@ -821,7 +821,7 @@ body,
 	margin: 0 1.5rem;
 	padding-left: 0;
 	padding-right: 0;
-	font-size: 1.1rem;
+	font-size: 1.4rem;
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 0.1rem;
@@ -829,22 +829,25 @@ body,
 
 /* Header Initial & Active Nav Colors */
 .header .navigation > ul > li > a{
-	color: #999;
+	color: #ddd;
 	opacity: 1;
 }
 .header .navigation > ul > li.current > a,
 .header .navigation > ul > li > a:hover{
-	color: #33363a;
+	color: #ffffff;
 	opacity: 1;
+	text-decoration: underline;
+	text-underline-offset: 1rem;
 }
+
 .header .navigation > ul > li.current > a:hover{
-	color: #33363a;
+	color: #ffffff;
 }
 
 /* Transparent Header Initial, Hover & Current Nav Colors */
 .header-transparent .navigation > ul > li > a{
 	color: #fff;
-	opacity: 0.6;
+	opacity: 1;
 }
 .header-transparent .navigation > ul > li > a:hover{
 	color: #fff;
@@ -869,17 +872,17 @@ body,
 
 /* Header Background Initial, Hover & Current Nav Colors - On Scroll! */
 .header-background .navigation > ul > li > a{
-	color: #999;
+	color: #ccc;
 }
 .header-background .navigation > ul > li.current > a{
-	color: #33363a;
+	color: #ffffff;
 	border-bottom: none;
 }
 .header-background .navigation > ul > li.current > a:hover{
-	color: #33363a;
+	color: #ffffff;
 }
 .header-background .navigation > ul > li > a:hover{
-	color: #33363a;
+	color: #ddd;
 	opacity: 1;
 }
 
@@ -1259,7 +1262,7 @@ body,
 	width: 12rem;
 }
 .side-navigation-wrapper{
-	background-color: #f6f6f6;
+	background-color: #002d40;
 	box-shadow: none !important;
 }
 .side-navigation-wrapper.slide-in-reset{
@@ -1288,6 +1291,7 @@ body,
 }
 
 /* Side Main Nav Initial Colors & Padding */
+
 .side-navigation > ul > li > a{
 	padding: 0 1rem;
 	display: inline;
@@ -1296,13 +1300,17 @@ body,
 	letter-spacing: 0;
 	text-transform: none;
 	font-weight: 700;
-	color: #999;
+	color: #dddddd;
 	position: relative;
 }
+
+
 .side-navigation ul li.current > a{
-	color: #33363a;
+	color: #ffffff;
 	font-weight: 700;
-}
+	text-decoration: underline;
+	}
+	
 .side-navigation-wrapper .navigation-hide{
 	margin-right: 2rem;
 }
@@ -1386,7 +1394,7 @@ body,
 /* Side Nav Hover Colors */
 .side-navigation ul li a:hover,
 .side-navigation ul li.current a:hover{
-	color: #33363a;
+	color: #dddddd;
 }
 
 /* Side Nav Widget */
