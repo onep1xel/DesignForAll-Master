@@ -80,7 +80,7 @@ button,
 .post-info-aside,
 .accordion > ul > li > a,
 .tab-nav > li > a{
-	font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-family: 'gira-sans', 'Helvetica Neue', 'Helvetica', sans-serif;
 }
 
 /* Titles */
@@ -91,7 +91,7 @@ h4,.h4,
 h5,.h5,
 h6,.h6{
 	line-height: 1;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: none;
 	color: #33363a;
 }
@@ -244,7 +244,7 @@ blockquote{
 /* Text Classes */
 .text-xlarge{
 	font-size: 2.6rem;
-	font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-family: 'gira-sans', 'Helvetica Neue', 'Helvetica', sans-serif;
 	font-weight:800;
 }
 
@@ -461,21 +461,97 @@ body,
 
 /* green */
 .bkg-green{
-	background-color: #2bada4;
-	border-color: #2bada4;
+	background-color: #8fc8b5;
+	border-color: #8fc8b5;
 }
 .bkg-hover-green:hover{
-	background-color: #2bada4;
-	border-color: #2bada4;
+	background-color: #8fc8b5;
+	border-color: #8fc8b5;
 }
 .border-green,
 .border-hover-green:hover{
-	border-color: #2bada4;
+	border-color: #8fc8b5;
 }
 .color-green,
 .color-hover-green:hover{
-	color: #2bada4;
+	color: #8fc8b5;
 }
+
+/* orange */
+.bkg-orange{
+	background-color: #e99b41;
+	border-color: #e99b41;
+}
+.bkg-hover-orange:hover{
+	background-color: #e99b41;
+	border-color: #e99b41;
+}
+.border-orange,
+.border-hover-orange:hover{
+	border-color: #e99b41;
+}
+.color-orange,
+.color-hover-orange:hover{
+	color: #e99b41;
+}
+
+/* plum */
+.bkg-plum{
+	background-color: #591a1a;
+	border-color: #591a1a;
+}
+.bkg-hover-plum:hover{
+	background-color: #591a1a;
+	border-color: #591a1a;
+}
+.border-plum,
+.border-hover-plum:hover{
+	border-color: #591a1a;
+}
+.color-plum,
+.color-hover-plum:hover{
+	color: #591a1a;
+}
+
+
+/* sky */
+.bkg-sky{
+	background-color: #9fcbe9;
+	border-color: #9fcbe9;
+}
+.bkg-hover-sky:hover{
+	background-color: #9fcbe9;
+	border-color: #9fcbe9;
+}
+.border-sky,
+.border-hover-sky:hover{
+	border-color: #9fcbe9;
+}
+.color-sky,
+.color-hover-sky:hover{
+	color: #9fcbe9;
+}
+
+
+/* whale */
+.bkg-whale{
+	background-color: #002d40;
+	border-color: #002d40;
+}
+.bkg-hover-whale:hover{
+	background-color: #002d40;
+	border-color: #002d40;
+}
+.border-whale,
+.border-hover-whale:hover{
+	border-color: #002d40;
+}
+.color-whale,
+.color-hover-whale:hover{
+	color: #002d40;
+}
+
+
 
 /* theme */
 .bkg-theme{
