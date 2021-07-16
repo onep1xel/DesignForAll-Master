@@ -1296,7 +1296,7 @@ body,
 	padding: 0 1rem;
 	display: inline;
 	font-size: 1.6rem;
-	line-height: 1.4;
+	line-height: 2;
 	letter-spacing: 0;
 	text-transform: none;
 	font-weight: 700;
@@ -1310,7 +1310,7 @@ body,
 	font-weight: 700;
 	text-decoration: underline;
 	}
-	
+
 .side-navigation-wrapper .navigation-hide{
 	margin-right: 2rem;
 }
@@ -1321,8 +1321,8 @@ body,
 	color: #33363a;
 }
 .one-page-nav .side-navigation > ul > li > a{
-	padding: 0 2rem;
-	font-size: 3rem;
+	padding: 0 3rem 3rem;
+	font-size: 1.8rem;
 }
 
 /* Side Nav Sub Menu Initial Colors & Padding */
@@ -1331,7 +1331,7 @@ body,
 }
 .side-navigation .sub-menu a{
 	text-transform: none;
-	font-size: 1.2rem;
+	font-size: 1.8rem;
 	font-weight: normal;
 	color: #999;
 }
