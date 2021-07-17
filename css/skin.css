@@ -48,9 +48,9 @@ Copyright: ThemeMountain
 body{
 	letter-spacing: 0;
 	font-weight: 400;
-	font-size: 1.4rem;
+	font-size: 1.7rem;
 	line-height: 1.8;
-	color: #6c6f73;
+	color: #33363a;
 	font-family: 'faustina', 'georgia', serif;
 }
 
@@ -720,7 +720,7 @@ body,
 
 /* Header Initial Styling */
 .header .header-inner{
-	background-color: #002d40;
+	background-color: #ffffff;
 	border-bottom: none;
 	/*border-bottom: 1px solid #eee;*/
 }
@@ -749,7 +749,7 @@ body,
 
 /* Background Header - On Scroll! */
 .header-background .header-inner{
-	background-color: #002d40;
+	background-color: #ffffff;
 }
 .header-background.with-shadow .header-inner{
 	box-shadow: 0 0 3rem 0 rgba(0,0,0,0.1);
@@ -909,27 +909,27 @@ body,
 	margin: 0 1.5rem;
 	padding-left: 0;
 	padding-right: 0;
-	font-size: 1.4rem;
-	text-transform: uppercase;
+	font-size: 1.8rem;
+	text-transform: none;
 	font-weight: 700;
-	letter-spacing: 0.1rem;
+	letter-spacing: none;
 }
 
 /* Header Initial & Active Nav Colors */
 .header .navigation > ul > li > a{
-	color: #ddd;
+	color: #33363a;
 	opacity: 1;
 }
 .header .navigation > ul > li.current > a,
 .header .navigation > ul > li > a:hover{
-	color: #ffffff;
+	color: #33363a;
 	opacity: 1;
 	text-decoration: underline;
 	text-underline-offset: 1rem;
 }
 
 .header .navigation > ul > li.current > a:hover{
-	color: #ffffff;
+	color: #33363a;
 }
 
 /* Transparent Header Initial, Hover & Current Nav Colors */
@@ -960,17 +960,17 @@ body,
 
 /* Header Background Initial, Hover & Current Nav Colors - On Scroll! */
 .header-background .navigation > ul > li > a{
-	color: #ccc;
+	color: #33363a;
 }
 .header-background .navigation > ul > li.current > a{
-	color: #ffffff;
+	color: #000000;
 	border-bottom: none;
 }
 .header-background .navigation > ul > li.current > a:hover{
-	color: #ffffff;
+	color: #33363a;
 }
 .header-background .navigation > ul > li > a:hover{
-	color: #ddd;
+	color: #000000;
 	opacity: 1;
 }
 
@@ -1350,7 +1350,7 @@ body,
 	width: 12rem;
 }
 .side-navigation-wrapper{
-	background-color: #002d40;
+	background-color: #fff;
 	box-shadow: none !important;
 }
 .side-navigation-wrapper.slide-in-reset{
@@ -1383,34 +1383,39 @@ body,
 .side-navigation > ul > li > a{
 	padding: 0 1rem;
 	display: inline;
-	font-size: 1.6rem;
+	font-size: 2rem;
 	line-height: 2;
 	letter-spacing: 0;
 	text-transform: none;
-	font-weight: 700;
-	color: #dddddd;
+	font-weight: 600;
+	color: #3e3e3e;
 	position: relative;
 }
 
 
 .side-navigation ul li.current > a{
-	color: #ffffff;
+	color: #000000;
 	font-weight: 700;
 	text-decoration: underline;
 	}
+
+	.side-navigation > ul > li > a:hover{
+		text-decoration: underline;
+		color: #000000;
+		}
 
 .side-navigation-wrapper .navigation-hide{
 	margin-right: 2rem;
 }
 .side-navigation-wrapper .navigation-hide{
-	color: #666;
+	color: #002d40;
 }
 .side-navigation-wrapper .navigation-hide a:hover{
-	color: #33363a;
+	color: #000000;
 }
 .one-page-nav .side-navigation > ul > li > a{
 	padding: 0 3rem 3rem;
-	font-size: 1.8rem;
+	font-size: 2.6rem;
 }
 
 /* Side Nav Sub Menu Initial Colors & Padding */
@@ -1421,10 +1426,10 @@ body,
 	text-transform: none;
 	font-size: 1.8rem;
 	font-weight: normal;
-	color: #999;
+	color: #3e3e3e;
 }
 .side-navigation .sub-menu a:hover{
-	color: #fff;
+	color: #3e3e3e;
 }
 .side-navigation .sub-menu li:first-child{
 	padding-top: 1rem;
