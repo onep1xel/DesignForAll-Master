@@ -2430,7 +2430,8 @@ h3.project-title{
 	text-transform: uppercase;
 }
 .project-description{
-	font-size: 1.2rem;
+	font-size: 1.4 rem;
+	text-transform: uppercase;
 }
 .item-description.with-background{
 	padding: 2rem;
