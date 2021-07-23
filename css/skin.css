@@ -803,12 +803,12 @@ body,
 
 /* Initial Logo Width */
 .header .logo{
-	width: 9rem;
+	width: 17rem;
 }
 
 /* Compacted Header Logo Width */
 .header-compact .logo{
-	width: 7rem;
+	width: 4rem;
 }
 
 /* Initial Logo Styling */
@@ -934,16 +934,16 @@ body,
 
 /* Transparent Header Initial, Hover & Current Nav Colors */
 .header-transparent .navigation > ul > li > a{
-	color: #fff;
+	color: #444;
 	opacity: 1;
 }
 .header-transparent .navigation > ul > li > a:hover{
-	color: #fff;
+	color: #000;
 	opacity: 1;
 }
 .header-transparent .navigation > ul > li.current > a,
 .header-transparent .navigation > ul > li.current > a:hover{
-	color: #fff;
+	color: #000;
 	opacity: 1;
 }
 
