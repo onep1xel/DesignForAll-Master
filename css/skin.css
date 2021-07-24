@@ -106,7 +106,7 @@ h3 a:hover,
 h4 a:hover,
 h5 a:hover,
 h6 a:hover{
-	color: #2bada4;
+	color: #666;
 }
 h1,.h1{
 	font-size: 4.5rem;
@@ -127,11 +127,11 @@ h4,.h4{
 h5,.h5{
 	font-size: 1.6rem;
 	line-height: 1.2;
+	text-transform: uppercase;
 }
 h6,.h6{
-	font-size: 1.2rem;
+	font-size: 12rem;
 	line-height: 1.2;
-	text-transform: uppercase;
 }
 
 /* Widget Titles */
@@ -170,12 +170,12 @@ a,
 p a,
 .box a:not(.button),
 .shop .breadcrumb a{
-	color: #2bada4;
+	color: #333;
 }
 .sidebar .widget a,
 .shop .product-summary a,
 .shop .cart-overview a{
-	color: #666;
+	color: #333;
 }
 a:hover,
 p a:hover,
@@ -194,7 +194,7 @@ p a:hover,
 .widget a:not(.button):hover,
 .shop .product-summary a:hover,
 .shop .cart-overview a:hover{
-	color: #666;
+	color: #333;
 	text-decoration: underline;
 }
 
@@ -310,7 +310,7 @@ blockquote{
 		font-size: 1.3rem;
 	}
 	h6{
-		font-size: 1.1rem;
+		font-size: 11rem;
 	}
 	h5.tms-caption,
 	.tmp-content h5{
@@ -349,7 +349,7 @@ blockquote{
 	.fullscreen-section .background-on-mobile h4,
 	.fullscreen-section .background-on-mobile h5,
 	.fullscreen-section .background-on-mobile h6{
-		color: #33363a !important;
+		color: #666 !important;
 	}
 }
 
@@ -808,7 +808,7 @@ body,
 
 /* Compacted Header Logo Width */
 .header-compact .logo{
-	width: 4rem;
+	width: 17rem;
 }
 
 /* Initial Logo Styling */
