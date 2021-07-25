@@ -276,7 +276,7 @@ blockquote{
 @media only screen and (max-width: 768px){
 	h1,
 	.title-xlarge{
-		font-size: 4rem;
+		font-size: 3rem;
 	}
 	h2,
 	.title-large{
@@ -284,10 +284,10 @@ blockquote{
 	}
 	h3,
 	.title-medium{
-		font-size: 1.8rem;
+		font-size: 2.8rem;
 	}
 	h4{
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 	h5{
 		font-size: 1.3rem;
@@ -454,21 +454,21 @@ body,
 	color: #232323;
 }
 
-/* green */
-.bkg-green{
+/* mint */
+.bkg-mint{
 	background-color: #8FC8B5;
 	border-color: #8FC8B5;
 }
-.bkg-hover-green:hover{
+.bkg-hover-mint:hover{
 	background-color: #8fc8b5;
 	border-color: #8FC8B5;
 }
-.border-green,
-.border-hover-green:hover{
+.border-mint,
+.border-hover-mint:hover{
 	border-color: #8FC8B5;
 }
-.color-green,
-.color-hover-green:hover{
+.color-mint,
+.color-hover-mint:hover{
 	color: #8FC8B5;
 }
 
@@ -508,21 +508,21 @@ body,
 	color: #F9C9C7;
 }
 
-/* red */
-.bkg-red{
+/* rose */
+.bkg-rose{
 	background-color: #DE4B37;
 	border-color: #DE4B37;
 }
-.bkg-hover-red:hover{
+.bkg-hover-rose:hover{
 	background-color: #DE4B37;
 	border-color: #DE4B37;
 }
-.border-red,
-.border-hover-red:hover{
+.border-rose,
+.border-hover-rose:hover{
 	border-color: #DE4B37;
 }
-.color-red,
-.color-hover-red:hover{
+.color-rose,
+.color-hover-rose:hover{
 	color: #DE4B37;
 }
 
