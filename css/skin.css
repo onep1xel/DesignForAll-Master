@@ -1486,7 +1486,7 @@ body,
 	letter-spacing: 0;
 	text-transform: none;
 	font-weight: 600;
-	color: #3e3e3e;
+	color: #626262;
 	position: relative;
 }
 
@@ -1585,7 +1585,7 @@ body,
 /* Side Nav Hover Colors */
 .side-navigation ul li a:hover,
 .side-navigation ul li.current a:hover{
-	color: #dddddd;
+	color: #626262;
 }
 
 /* Side Nav Widget */
