@@ -214,7 +214,7 @@ a.animated-link{
 /* Lead */
 .lead,
 blockquote{
-	font-size: 2rem;
+	font-size: 2.2rem;
 	font-weight: 600;
 	line-height: 1.3;
 }
@@ -276,7 +276,7 @@ blockquote{
 @media only screen and (max-width: 768px){
 	h1,
 	.title-xlarge{
-		font-size: 3rem;
+		font-size: 2.7rem;
 	}
 	h2,
 	.title-large{
@@ -302,7 +302,7 @@ blockquote{
 
 	/* Lead */
 	.lead{
-		font-size: 1.7rem;
+		font-size: 2.2rem;
 	}
 
 	/* Text Classes */
