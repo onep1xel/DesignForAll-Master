@@ -2285,9 +2285,19 @@ body,
 }
 
 /* Hero */
-.hero-2-intro-1{
-	background-image: url(../images/generic/hero-homepage.jpg);
+.hero-1-intro-1{
+	background-image: url(../images/homepage/party-wheelchairs.jpg);
 }
+
+.hero-2-intro-1{
+	background-image: url(../images/homepage/walker-beach.jpg);
+}
+
+.hero-3-intro-1{
+	background-image: url(../images/homepage/senior-coffee.jpg);
+}
+
+
 .hero-2-app-1{
 	background-image: url(../images/generic/hero-app-1.jpg);
 }
