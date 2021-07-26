@@ -259,11 +259,7 @@ blockquote{
 	line-height: 1;
 }
 
-.pv{
-padding: 0;
-text-align: left;
-float: left;
-}
+
 
 /* Weight Classes */
 .weight-light{
