@@ -2284,16 +2284,22 @@ body,
 	background-image: url(../images/team/hero-2.jpg);
 }
 
+
+
+.bkg-image-1{
+	background-image:url(../images/homepage/party-wheelchairs.jpg);
+}
+
 /* Hero */
-.hero-1-intro-1{
+.hero-02-intro-1{
 	background-image: url(../images/homepage/party-wheelchairs.jpg);
 }
 
-.hero-2-intro-1{
+.hero-02-intro-1{
 	background-image: url(../images/homepage/walker-beach.jpg);
 }
 
-.hero-3-intro-1{
+.hero-03-intro-1{
 	background-image: url(../images/homepage/senior-coffee.jpg);
 }
 

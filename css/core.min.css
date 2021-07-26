@@ -9472,9 +9472,18 @@ body.boxed .header .header-inner {
   background-color: #1ecd6d
 }
 
-.hero-2 {
-  background-image: url(../images/slider/slide-2-fs-hp.jpg)
+.hero-01 {
+  background-image: url(../images/homepage/party-wheelchairs.jpg)
 }
+
+.hero-02 {
+  background-image: url(../images/homepage/walker-beach.jpg)
+}
+
+.hero-03 {
+  background-image: url(../images/homepage/senior-coffee.jpg)
+}
+
 
 .hero-3 {
   display: table;
