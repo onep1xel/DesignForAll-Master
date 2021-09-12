@@ -3655,6 +3655,20 @@ a.disabled .text-line{
 [26. Media Element Player]
 */
 
+.mobile-video {
+display: none;
+}
+
+@media screen and (max-width: 420px) {
+	.desktop-video {
+display: none;
+}
+.mobile-video {
+display: block;
+}
+}
+
+
 .mejs-container.mejs-audio .mejs-controls{
 	border-radius: 3px;
 }
