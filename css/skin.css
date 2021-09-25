@@ -80,7 +80,7 @@ button,
 .post-info-aside,
 .accordion > ul > li > a,
 .tab-nav > li > a{
-	font-family: 'degular', 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-family: 'degular', sans-serif;
 }
 
 /* Titles */
@@ -268,10 +268,20 @@ blockquote{
 .weight-regular{
 	font-weight: 400;
 }
+
+.weight-medium{
+	font-weight: 500;
+}
+
 .weight-semi-bold{
+	font-weight: 600;
+}
+
+.weight-bold{
 	font-weight: 700;
 }
-.weight-bold{
+
+.weight-black{
 	font-weight: 800;
 }
 
