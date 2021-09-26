@@ -23,3 +23,11 @@ transform: scale(1.8);
 display: block;
 }
 }
+
+
+
+
+
+@media screen and (max-width: 960px) { .desktop-video { transform: scale(1.8); } }
+
+@media screen and (max-width: 768px) { .desktop-video { display: none; } .mobile-video {display: block} }
