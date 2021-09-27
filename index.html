@@ -150,15 +150,18 @@ frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="
 </iframe>
 
 
-<video class="mobile-video" autoplay muted playsinline loop center style="position: fixed;
+<video class="mobile-video" autoplay defaultMuted muted playsinline loop center style="position: fixed;
  right: 0;
  top: 0;
  bottom: 0;
  max-width: 100%;
  height: 100%;
- transform: scale(1.25);"> <source
- 						src="https://theaccessagency.com.au/videos/website-video-mobile2_1.mp4" type="video/mp4">
+ transform: scale(1.25);
+ transform: translateX(calc((100% - 100vw) / 2))">
+
+ <source src="https://beta.theaccessagency.com.au/videos/website-video-mobile2_1.mp4" type="video/mp4">
  						Your browser does not support the video tag. </video>
+
 
 <!--<iframe
 class="mobile-video" autoplay muted playsinline loop
