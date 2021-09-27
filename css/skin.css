@@ -259,6 +259,7 @@ blockquote{
 	line-height: 1;
 }
 
+.hidden { font-size: 0; }
 
 
 /* Weight Classes */
