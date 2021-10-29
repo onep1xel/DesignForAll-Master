@@ -1,7 +1,7 @@
 <?php
 // Your Account API & List ID
-$api_key = ""; // YOUR-API-KEY-HERE
-$list_id = ""; // YOUR-LIST-ID-HERE
+$api_key = "36d6d78e95d118fcc02bb380b7cd1fb3-us11"; // YOUR-API-KEY-HERE
+$list_id = "7c62662c61"; // YOUR-LIST-ID-HERE
 
 // Check $recipient
 if($recipient === '' || $list_id === '' ) {
