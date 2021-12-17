@@ -22,7 +22,7 @@
 		var obj = this;
 		var refW = settings.fulscreen ? $( window).width() : settings.fullwidth ? settings.scaleUnder : slider.data( 'width' ) ? parseFloat( slider.data( 'width' ) ) : parseFloat( slider.css( 'width' ) );
 		var refH = settings.fulscreen ? $( window ).height() : slider.data( 'height' ) ? parseFloat( slider.data( 'height' ) ) : parseFloat( slider.css( 'height' ) );
-		var slides = slider.find( '.tms-slides' ); 
+		var slides = slider.find( '.tms-slides' );
 		var active = slides.children( 'li:first-child' ).addClass( 'active' );
 		var slidesArray = [];
 		var origAnimation;
@@ -111,7 +111,7 @@
 		settings.parallaxSpeed = slider.data( 'parallax-speed' ) ? slider.data( 'parallax-speed' ) : settings.parallaxSpeed;
 		settings.parallaxScale = slider.is( '[data-parallax-scale-out]' ) || slider.is( '[data-parallax-scale-in]' ) ? true : settings.parallaxScale;
 		settings.parallaxFadeOut = slider.is( '[data-parallax-fade-out]' ) ? true : settings.parallaxFadeOut;
-		
+
 		// Check caption scaling option
 		if( !settings.captionScaling ) {
 			slider.addClass( 'tms-caption-no-scaling' );
@@ -130,14 +130,14 @@
 		if( mobile ){
 			settings.autoPlay = false;
 			settings.useVideoAPI = false;
-		}	
-		
+		}
+
 		/////////////////////////////////////////////////////////////////////////
 		// Build Nav & Add Events
 		/////////////////////////////////////////////////////////////////////////
 
 		// Show on hover
-		if( settings.navShowOnHover ) slider.addClass( 'show-on-hover' ); 
+		if( settings.navShowOnHover ) slider.addClass( 'show-on-hover' );
 
 		// Add arrow nav
 		if( settings.navArrows && slides.children().length > 1 ){
@@ -145,7 +145,7 @@
 			// Build
 			var prev =  $('<a href="#" />').attr( 'id', 'tms-prev' ).addClass('tms-arrow-nav').appendTo( slider );
 			var next =  $('<a href="#" />').attr( 'id', 'tms-next' ).addClass('tms-arrow-nav').appendTo( slider );
-				
+
 			// Actions
 			prev.each( function(){
 				$(this).on( 'click', function( event ){
@@ -154,7 +154,7 @@
 					obj.prevSlide();
 				});
 			});
-			next.each( function(){	
+			next.each( function(){
 				$(this).on( 'click', function( event ){
 					event.preventDefault();
 					if( settings.autoAdvance && slider.data( 'loaded' ) ) obj.resetSlideshow();
@@ -170,15 +170,15 @@
 
 		// Add pagination nav
 		if( settings.navPagination && slides.children().length > 1 ){
-				
+
 			// Build
 			var pagination = $( '<div>' ).addClass( 'tms-pagination' ).appendTo( slider );
 			for( var i = 1; i < slides.children().length + 1; i++ ) {
 				slider.find( pagination ).append( '<a href="#" id="tms-pagination-' + i + '" data-index="' + i + '" class="tms-bullet-nav" />' );
 			}
-				
+
 			// Ref
-			var pageNav = settings.paginationType === 'bullets' ? slider.find( '.tms-bullet-nav' ) : slider.find( '.tms-thumb-nav' ); 
+			var pageNav = settings.paginationType === 'bullets' ? slider.find( '.tms-bullet-nav' ) : slider.find( '.tms-thumb-nav' );
 
 			// Actions
 			pageNav.each( function(){
@@ -195,7 +195,7 @@
 				});
 			});
 			pagination.find( '.tms-bullet-nav:first-child' ).addClass( 'active' );
-			
+
 			// Show pagination
 			if( settings.lazyLoad ) pagination.css({ display: 'block' });
 		}
@@ -226,7 +226,7 @@
 				key[event.keyCode] = false;
 			});
 		}
-		
+
 		// Add swipe support to slides
 		slider.swipeIt({
 			draggable: false,
@@ -251,7 +251,7 @@
 			// Update ref dimensions if browser is resized upon load
 			if( slider.data( 'first-load' ) ) {
 				refW = settings.fulscreen ? $( window).width() : settings.fullwidth ? settings.scaleUnder : slider.data( 'width' ) ? parseFloat( slider.data( 'width' ) ) : parseFloat( slider.css( 'width' ) );
-				refH = settings.fulscreen ? $( window ).height() : slider.data( 'height' ) ? parseFloat( slider.data( 'height' ) ) : parseFloat( slider.css( 'height' ) );	
+				refH = settings.fulscreen ? $( window ).height() : slider.data( 'height' ) ? parseFloat( slider.data( 'height' ) ) : parseFloat( slider.css( 'height' ) );
 				slider
 					.data( 'refW', refW )
 					.data( 'refH', refH )
@@ -282,12 +282,12 @@
 		// Window Scroll Event
 		if( slider.parent().hasClass( 'tm-slider-parallax-container' ) && settings.parallax ){
 			$( window ).on( 'scroll', function(){
-				requestScroll( slider, settings ); 
+				requestScroll( slider, settings );
 			});
 
 			// On startup set parallax
 			updateParallaxElement( slider, settings );
-			
+
 		}else if( !slider.parent().hasClass( 'tm-slider-parallax-container' ) && settings.parallax ){
 			console.log( 'Add the class tm-slider-parallax-container to slider parent');
 		}
@@ -311,7 +311,7 @@
 
 		// Setup callback
 		if( settings.onSetup ) settings.onSetup();
-		
+
 		/////////////////////////////////////////////////////////////////////////
 		// Public Methods
 		/////////////////////////////////////////////////////////////////////////
@@ -340,14 +340,14 @@
 		var progressBar;
 		var animateBarTimer = null;
 		var animateSlideTimer = null;
-		
+
 		// Init Slideshow
 		obj.initSlideshow = function(){
 
 			// If timer already exists prevent
 			// it from reintializing
 			if( sliderTimer || slides.children().length < 2 ) return false;
-			
+
 			// Change default as slideshow
 			// is now active
 			settings.autoAdvance = true;
@@ -360,7 +360,7 @@
 
 			// Add the progress bar
 			if( settings.showProgressBar ) progressBar = $( '<div>' ).addClass( 'tms-progress-bar' ).appendTo( slider );
-			
+
 			// Call start
 			obj.startSlideshow();
 
@@ -379,17 +379,17 @@
 		obj.startSlideshow = function ( interval ) {
 			interval = !interval ? settings.interval : timeDiff;
 			sliderTimer = setInterval( function () {
-				
+
 				// Reset
 				if( interval !== settings.interval ){
 					clearInterval( sliderTimer );
 					interval = settings.interval;
 					baseInterval = settings.interval;
-					
+
 					// Start slideshow again
 					obj.startSlideshow();
 				}
-				
+
 				// Get time when slideshow begins
 				startTime = new Date().getTime();
 				if( typeof progressBar !== 'undefined' ) progressBar.css({ transition: 'none', width: '0px' });
@@ -400,17 +400,17 @@
 
 		// Pause Slideshow
 		obj.pauseSlideshow =  function () {
-			
+
 			// Check if it's already paused to prevent
 			// endTime from updating and that timer exists
 			if( paused || !sliderTimer ) return false;
-			
+
 			// Clear timer
 			clearInterval( sliderTimer );
-			
+
 			// Get time when paused
 			endTime = new Date().getTime();
-			
+
 			// Calculate time left of cycle
 			timeDiff = baseInterval - ( endTime - startTime ) < 50 ? 50 : baseInterval - ( endTime - startTime );
 			baseInterval = baseInterval === 0 ? settings.interval : timeDiff;
@@ -453,10 +453,10 @@
 			if( !sliderTimer ) return false;
 
 			clearInterval( sliderTimer );
-			
+
 			// Set progress to nill
 			if( typeof progressBar !== 'undefined' ) progressBar.css({ transition: 'none', width: '0px' });
-			
+
 			// Animate it based on original interval
 			animateProgress( settings.interval );
 
@@ -502,7 +502,7 @@
 				progressBar.stop( true, true ).animate({ width: '100%'}, interval );
 			}
 		};
-			
+
 		/**
 		*	Direcitonal calls
 		*/
@@ -510,7 +510,7 @@
 		obj.nextSlide = function(){
 			if( slider.data( 'transitioning' ) ) return false;
 			var index;
-			
+
 			// Update active slide
 			active = slider.find( 'li.active' );
 			var nextSlide = slidesArray[( $.inArray( active.attr( 'id' ), slidesArray ) + 1)];
@@ -535,7 +535,7 @@
 			// Crousel true, more than 1 visible slide, set left limit
 			if( settings.carousel && settings.carouselVisible > 1 ){
 				var visibleSlides = carouselBreakPoints( slider, settings );
-				index = index === slides.children().length ? slides.children().length - ( visibleSlides - 1 ) : $.inArray( prevSlide, slidesArray ) + 1; 
+				index = index === slides.children().length ? slides.children().length - ( visibleSlides - 1 ) : $.inArray( prevSlide, slidesArray ) + 1;
 			}
 			this.slideTo( index, 'prev' );
 		};
@@ -545,7 +545,7 @@
 		*	@param index (required) integer;
 		*		Defines target slide
 		*	@param direction (optional) string;
-		*		String indicating the direction of the 
+		*		String indicating the direction of the
 		*		slider animation
 		*/
 
@@ -566,7 +566,7 @@
 			updatePagination( slider, index );
 
 			// Get slider width in case
-			// it has changed since previous animation	
+			// it has changed since previous animation
 			var sliderW = slider.width();
 			var sliderH = slider.height();
 
@@ -600,7 +600,7 @@
 
 			// Update parallax element in the event
 			// scale in/out option is used
-			if( slider.parent().hasClass( 'tm-slider-parallax-container' ) && settings.parallax ) requestScroll( slider, settings ); 
+			if( slider.parent().hasClass( 'tm-slider-parallax-container' ) && settings.parallax ) requestScroll( slider, settings );
 
 			// Redimension slider and target slide
 			// before brought into view
@@ -616,7 +616,7 @@
 			}else{
 				direction = direction === 'next' ? 1 : -1;
 			}
-			
+
 			// Check visible slides
 			var visibleSlides = carouselBreakPoints( slider, settings );
 
@@ -641,7 +641,7 @@
 						animateComplete( slider, settings );
 					});
 				}else{
-					
+
 					// Slider is now animating
 					slider.data( 'transitioning' , true );
 					target.css({ left: sliderW * direction + 'px', visibility: 'visible' }).animate({ opacity: 1, left: 0 + 'px'}, settings.speed, settings.easingFallback, function(){
@@ -661,7 +661,7 @@
 	/////////////////////////////////////////////////////////////////////////
 
 	/**
-	*	Set Caption Attributes 
+	*	Set Caption Attributes
 	*	@param slider (required) object;
 	*		Iterate over all slider objects
 	*		and set caption attributes upon
@@ -737,9 +737,9 @@
 
 	/**
 	*	Preload Slides
-	*	@param slider (required) object; 
-	*	@param settings (required) array; 
-	*	@param obj (required) object; 
+	*	@param slider (required) object;
+	*	@param settings (required) array;
+	*	@param obj (required) object;
 	*		Ref to DOM element for
 	*		accessing public methods
 	*/
@@ -755,7 +755,7 @@
 
 		// Prepare each slide
 		slide.each( function(){
-			
+
 			// Check the number of images, videos and captions
 			// in the current slide
 			var currentSlide = $( this );
@@ -767,7 +767,7 @@
 			// set their initial animation position
 			positionNextCaption( currentSlide, settings );
 
-			// Add preloader based on 
+			// Add preloader based on
 			// preloading option
 			var loader = $( '<div class="tm-loader"><div id="circle" /></div>' );
 			if( totalSlideImgs > 0 ){
@@ -791,7 +791,7 @@
 				redimensionSlider( currentSlide, settings );
 				positionCarousel( slider, settings );
 			}
-			
+
 			// If there are no images in the slide
 			// fire loaded
 			if( !totalSlideImgs ){
@@ -799,13 +799,13 @@
 				positionCarousel( slider, settings );
 				loaded( currentSlide, totalSlides, settings, obj );
 			}else{
-				
-				// Preload each image in 
+
+				// Preload each image in
 				// each slide
 				currentSlide
 					.find( 'img' )
 					.each( function( i, src ){
-						
+
 						// Check if retina
 						src = $( this ).data( 'src' );
 						var originalImg = src;
@@ -849,7 +849,7 @@
 								if( i === totalSlideImgs ){
 									totalSlides++;
 									loaded( currentSlide, totalSlides, settings, obj );
-								} 
+								}
 							});
 					});
 			}
@@ -859,10 +859,10 @@
 	/**
 	*	Slide Loaded
 	*	@param slide (required for lazyload only) object;
-	*		Loaded slide object that 
+	*		Loaded slide object that
 	*		needs handling
 	*	@param totaSlides (required) integer;
-	*		Flag used to check slides loaded vs 
+	*		Flag used to check slides loaded vs
 	*		number of slides to load
 	*	@param settings (required for lazyload only) array;
 	*	@param obj (required for lazyload only) object;
@@ -948,7 +948,7 @@
 				// If visible slides is greater than 1 show all
 				if( settings.carouselVisible > 1 ) slider.find( '.tms-caption' ).show();
 
-				// Animate slides 
+				// Animate slides
 				// or slides
 				if( tSupport ){
 					if( !settings.carousel ) {
@@ -977,7 +977,7 @@
 				slider.find( '.tms-arrow-nav, .tms-pagination' ).css({ display: 'block' });
 			}
 		}else{
-			
+
 			// Delete loader
 			if( slide.find( '.tm-loader' ).length && !isBkgVideoSlide || mobile ) removeLoader( slider, slide, settings );
 
@@ -1078,7 +1078,7 @@
 	*/
 
 	var animate = function( selector, opacity, transX, transY, transZ, rotateX, rotateY, rotateZ, scale, transOrigX, transOrigY, duration, delay, easing, settings ){
-		
+
 		// Get reference to slider
 		var slider = selector.closest( '.tm-slider-container' );
 
@@ -1086,10 +1086,10 @@
 
 			// Slider is now animating
 			if( !slider.data( 'animate-first-slide' ) ) slider.data( 'transitioning' , true );
-			
+
 			// Slider before callback
 			if( settings.onSlideBefore ) settings.onSlideBefore();
-		}  
+		}
 
 		// Animation magic
 		var attrs = {};
@@ -1108,20 +1108,20 @@
 		selector
 				.css( attrs )
 				.on( transitionEnd, function( event ){
-					
+
 					// Prevent bubbling
 					event.stopPropagation();
-					
+
 					// Remove listener
 					$( this ).off( transitionEnd );
-					
+
 					// Only call animation complete if currently animation
 					// object is either target slide or slide wrapper for carousel
 					if( $( this ).hasClass( 'target' ) || $( this ).hasClass( 'tms-slides' ) && !slider.data( 'animate-first-slide' ) ) {
 						animateComplete( slider, settings );
 					}
 
-					// Clear transition on captions in the event that other 
+					// Clear transition on captions in the event that other
 					// transition properties are animated through classes
 					if( $( this ).hasClass( 'tms-caption' ) ){
 						$( this ).css({ transition: '' });
@@ -1172,8 +1172,8 @@
 	};
 	var animateCaption = function( active, settings ){
 
-		// Iterate over captions in active 
-		// slide and reset attributes to original and 
+		// Iterate over captions in active
+		// slide and reset attributes to original and
 		// call animate
 		active
 			.find( '.tms-caption' )
@@ -1204,7 +1204,7 @@
 	*	@param slider (required) object;
 	*	@param index (required) integer;
 	*/
-		
+
 	var updatePagination = function( slider, index ){
 		var pagination = slider.find( '.tms-pagination' );
 		pagination.find( '.active' ).removeClass( 'active' );
@@ -1250,7 +1250,7 @@
 		var width = slider.width() / visibleSlides;
 		var tallestSlide = 0;
 		var animateCarouselTimer = null;
-		
+
 		// Recalculate slide container
 		// width based on breakpoints
 		slides
@@ -1272,10 +1272,10 @@
 			i = slides.children().length - 2;
 			indexUpdate = true;
 
-		// Original number of 
+		// Original number of
 		// slides visible
 		}else if( actIndex > slides.children().length - visibleSlides ){
-			i = slides.children().length - visibleSlides + 1; 
+			i = slides.children().length - visibleSlides + 1;
 			indexUpdate = true;
 
 		// None of the above
@@ -1337,7 +1337,7 @@
 		// to be used for captions
 		slider.data( 'newSW', newSliderW );
 		slider.data( 'newSH', newSliderH );
-		
+
 		// Size wrapper
 		if( settings.carousel ){
 			var scaleHeightTimer = null;
@@ -1401,8 +1401,8 @@
 					}
 				}
 				mediaR = mediaW / mediaH;
-						
-				// Calculate size if slider is set to fullscreen, 
+
+				// Calculate size if slider is set to fullscreen,
 				// If slide has attribute forcefit
 				// Or if slide has background video
 				if(  type === 'image' && settings.fullscreen || forceFit || type === 'video' && bkgVideo ){
@@ -1423,7 +1423,7 @@
 						});
 					}
 
-				// Calculate size if regular video	
+				// Calculate size if regular video
 				} else if ( type === 'video' ){
 					$( this ).css({
 						width: Math.floor( mediaW ) + 'px',
@@ -1434,18 +1434,18 @@
 				}
 			});
 		redimensionCaptions( slide, settings );
-	}; 
+	};
 
 	/**
 	*	Resize Captions
 	*	@param slide (required) object;
 	*		Slide object whose caption will
-	*		be resized 
+	*		be resized
 	*	@param settings (required) array;
 	*/
 
 	var redimensionCaptions = function( slide, settings ){
-		
+
 		var slider = slide.closest( '.tm-slider-container' );
 		var newSliderW = slider.data( 'newSW' );
 		var newSliderH = slider.data( 'newSH' );
@@ -1455,7 +1455,7 @@
 		if( !settings.captionScaling || settings.carouselVisible > 1 ) return false;
 
 		slide.find( '.tms-caption' ).each( function(){
-			
+
 			if( !$( this ).is( '[data-no-scale]' ) ){
 
 				// Get references
@@ -1466,7 +1466,7 @@
 				var t = caption.data( 'y' );
 
 				// Pixel values
-				var w = caption.data( 'w' );  
+				var w = caption.data( 'w' );
 				var pt = caption.data( 'pt' );
 				var pr = caption.data( 'pr' );
 				var pb = caption.data( 'pb' );
@@ -1479,7 +1479,7 @@
 				var br = caption.data( 'br' );
 				var bb = caption.data( 'bb' );
 				var bl = caption.data( 'bl' );
-				var fs = caption.data( 'fs' ); 
+				var fs = caption.data( 'fs' );
 				var lh = caption.data( 'lh' ) === 0 ? fs : caption.data( 'lh' );
 				var rxof = caption.is( '[data-offsetx]' ) ? parseFloat( caption.data( 'offsetx' ) ) : 0;
 				var ryof = caption.is( '[data-offsety]' ) ? parseFloat( caption.data( 'offsety' ) ) : 0;
@@ -1499,32 +1499,32 @@
 				}
 
 				// Calculate sizes
-				// Checked against original values 
+				// Checked against original values
 				// to prevent scaling up
 				if( !caption.find( 'img' ).length && !caption.find( 'iframe, video' ).length ){
 
 					caption.css({
-									
+
 						// Update Font
 						fontSize: newSliderW * ( fs / refW ) > fs ? fs : newSliderW * ( fs / refW ) + 'px',
 						lineHeight: newSliderW * ( lh / refW ) > lh ? lh + 'px' : newSliderW * ( lh / refW ) + 'px',
-								
+
 						// Update Padding
 						paddingTop: newSliderW * ( pt / refW ) > pt ? pt : newSliderW * ( pt / refW ) + 'px' ,
-						paddingRight: newSliderW * ( pr / refW ) > pr ? pr : newSliderW * ( pr / refW ) + 'px' , 
-						paddingBottom: newSliderW * ( pb / refW ) > pb ? pb : newSliderW * ( pb / refW ) + 'px' , 
-						paddingLeft: newSliderW * ( pl / refW ) > pl ? pl : newSliderW * ( pl / refW ) + 'px' , 
+						paddingRight: newSliderW * ( pr / refW ) > pr ? pr : newSliderW * ( pr / refW ) + 'px' ,
+						paddingBottom: newSliderW * ( pb / refW ) > pb ? pb : newSliderW * ( pb / refW ) + 'px' ,
+						paddingLeft: newSliderW * ( pl / refW ) > pl ? pl : newSliderW * ( pl / refW ) + 'px' ,
 
 						// Update Margin
-						marginTop: newSliderW * ( mt / refW ) > mt ? mt : newSliderW * ( mt / refW ) + 'px' , 
-						marginRight: newSliderW * ( mr / refW ) > mr ? mr : newSliderW * ( mr / refW ) + 'px' , 
-						marginBottom: newSliderW * ( mb / refW ) > mb ? mb : newSliderW * ( mb / refW ) + 'px' , 
+						marginTop: newSliderW * ( mt / refW ) > mt ? mt : newSliderW * ( mt / refW ) + 'px' ,
+						marginRight: newSliderW * ( mr / refW ) > mr ? mr : newSliderW * ( mr / refW ) + 'px' ,
+						marginBottom: newSliderW * ( mb / refW ) > mb ? mb : newSliderW * ( mb / refW ) + 'px' ,
 						marginLeft: newSliderW * ( ml / refW ) > ml ? ml : newSliderW * ( ml / refW ) + 'px' ,
 
 						// Update border
-						borderTopWidth: newSliderW * ( bt / refW ) > bt ? bt : Math.ceil( newSliderW * ( bt / refW ) ) + 'px' , 
-						borderRightWidth: newSliderW * ( br / refW ) > br ? br : Math.ceil( newSliderW * ( br / refW ) ) + 'px' , 
-						borderBottomWidth: newSliderW * ( bb / refW ) > bb ? bb : Math.ceil( newSliderW * ( bb / refW ) ) + 'px' , 
+						borderTopWidth: newSliderW * ( bt / refW ) > bt ? bt : Math.ceil( newSliderW * ( bt / refW ) ) + 'px' ,
+						borderRightWidth: newSliderW * ( br / refW ) > br ? br : Math.ceil( newSliderW * ( br / refW ) ) + 'px' ,
+						borderBottomWidth: newSliderW * ( bb / refW ) > bb ? bb : Math.ceil( newSliderW * ( bb / refW ) ) + 'px' ,
 						borderLeftWidth: newSliderW * ( bl / refW ) > bl ? bl : Math.ceil( newSliderW * ( bl / refW ) ) + 'px' ,
 
 						whiteSpace: 'nowrap'
@@ -1532,16 +1532,16 @@
 				}else{
 					caption.css({
 
-						// Update width only 
+						// Update width only
 						// for images & videos
-						width: mediaW + 'px', 
+						width: mediaW + 'px',
 						height: caption.children( 'iframe, video' ).length ? mediaW / 1.778 + 'px' : 'auto'
 					});
 				}
 
 				// Position
 				caption.css({
-					top: t === 'top' ? 0 + yof : t === 'bottom' ? newSliderH - caption.outerHeight() - yof : ( ( newSliderH - caption.outerHeight() ) / 2 ) + yof + 'px', 
+					top: t === 'top' ? 0 + yof : t === 'bottom' ? newSliderH - caption.outerHeight() - yof : ( ( newSliderH - caption.outerHeight() ) / 2 ) + yof + 'px',
 					left: l === 'left' ? 0 + xof : l === 'right' ? newSliderW - caption.outerWidth() - xof : ( ( newSliderW - caption.outerWidth() ) / 2 ) + xof + 'px'
 				});
 			}
@@ -1557,17 +1557,17 @@
 	*/
 
 	var positionNextCaption = function( slide, settings ){
-			
+
 		// Check slides visible
 		if( settings.carouselVisible > 1 ) return false;
 		slide.find( '.tms-caption' ).not( '.no-transition' ).each( function(){
 			var caption = $( this );
-			var o = caption.data( 'o' ) ? parseFloat( caption.data( 'o' ) ) : 0; 
+			var o = caption.data( 'o' ) ? parseFloat( caption.data( 'o' ) ) : 0;
 			var tx = caption.data( 'tx' ) ? parseFloat( caption.data( 'tx' ) ) : 0;
-			var ty = caption.data( 'ty' ) ? parseFloat( caption.data( 'ty' ) ) : 0; 
-			var tz = caption.data( 'tz' ) ? parseFloat( caption.data( 'tz' ) ) : 0; 
-			var rx = caption.data( 'rx' ) ? parseFloat( caption.data( 'rx' ) ) : 0; 
-			var ry = caption.data( 'ry' ) ? parseFloat( caption.data( 'ry' ) ) : 0; 
+			var ty = caption.data( 'ty' ) ? parseFloat( caption.data( 'ty' ) ) : 0;
+			var tz = caption.data( 'tz' ) ? parseFloat( caption.data( 'tz' ) ) : 0;
+			var rx = caption.data( 'rx' ) ? parseFloat( caption.data( 'rx' ) ) : 0;
+			var ry = caption.data( 'ry' ) ? parseFloat( caption.data( 'ry' ) ) : 0;
 			var rz = caption.data( 'rz' ) ? parseFloat( caption.data( 'rz' ) ) : 0;
 			var s = caption.data( 's' ) ? parseFloat( caption.data( 's' ) ) : 1;
 			if( tSupport ) {
@@ -1590,19 +1590,19 @@
 	*	Video handling
 	*	@param slide (required) object;
 	*	@param status (required) string;
-	*		String indicating if video 
+	*		String indicating if video
 	*		should play or pause
 	*	@param settings (required) array;
 	*/
-	
+
 	var media = function( slide, status, settings ){
 
 		if( !settings.useVideoAPI || settings.carouselVisible > 1 ) return false;
-			
+
 		var player;
 
 		try{
-			if( slide.find( 'iframe' ).length ){	
+			if( slide.find( 'iframe' ).length ){
 
 				// Reference
 				player = '#' + slide.find( 'iframe' ).attr( 'id' );
@@ -1650,11 +1650,11 @@
 	*	@param video (required) object;
 	*	@param settings (required) array;
 	*/
-	
+
 	// YouTube array
 	var ytPlayer = {};
 
-	// Flags for whether 
+	// Flags for whether
 	// scripts have been added to page
 	var vimeo = false;
 	var youtube = false;
@@ -1685,7 +1685,7 @@
 				var fsTag = document.getElementsByTagName( 'script' )[0];
 				fsTag.parentNode.insertBefore( v, fsTag );
 			}
-				
+
 			// Ensure iframe is ready to receive events
 			video.on( 'load', function(){
 				var iframe = $( this );
@@ -1701,7 +1701,7 @@
 					if ( firstSlide && settings.autoPlay ) vp.api( 'play' );
 
 					// Check mute setting, unmute in case background video is used
-					vp.api( 'setVolume', 1 ); 
+					vp.api( 'setVolume', 1 );
 					if( settings.muteBkgVideo || slide.is( '[data-mute-video]' ) ) vp.api( 'setVolume', 0 );
 
 					// Playing
@@ -1718,7 +1718,7 @@
 				});
 			});
 
-		// YouTube	
+		// YouTube
 		} else if ( typeof url != 'undefined' && url.indexOf( 'youtu' ) > -1 ){
 
 			// Add class
@@ -1741,7 +1741,7 @@
 				var fsTag2 = document.getElementsByTagName( 'script' )[0];
 				fsTag2.parentNode.insertBefore( yt, fsTag2 );
 			}
-			
+
 			// Yt events
 			var addYTEvents = function(){
 				$( '.youtube' ).each( function(){
@@ -1753,7 +1753,7 @@
 						events: {
 							'onStateChange': function( event ){
 
-								// Playing 
+								// Playing
 								if( event.data === YT.PlayerState.PLAYING ){
 
 									// Background video shown once playing
@@ -1763,18 +1763,18 @@
 										animateCaption( slide, settings );
 									}
 								}
-										
+
 								// Replay
 								if( event.data === YT.PlayerState.ENDED ){
 									if( settings.replayOnEnd ) ytPlayer[ id ].playVideo();
 								}
 							},
 							'onReady': function( event ) {
-								
+
 								// Play if first
 								if ( firstSlide && settings.autoPlay ) ytPlayer[ id ].playVideo();
 
-								// Check mute setting 
+								// Check mute setting
 								if( settings.muteBkgVideo || slide.is( '[data-mute-video]' ) ) ytPlayer[ id ].mute();
 							},
 							'onError': function( event ) {
@@ -1803,27 +1803,27 @@
 			};
 
 		// HTML5 Video
-		}else if ( video.is( 'video' ) ){ 
+		}else if ( video.is( 'video' ) ){
 
 			// Add class
 			video.addClass( 'html5-video' );
 
 			var videoId = document.getElementById( video.attr( 'id' ) );
 			var firstSlide = slide.is( ':first-child' ) ? true : false;
-			
+
 			// Play if first
 			if ( firstSlide && settings.autoPlay ){
 				videoId.load();
 				videoId.autoplay = true;
 			}
 
-			// Check mute setting 
+			// Check mute setting
 			if( settings.muteBkgVideo || slide.is( '[data-mute-video]' ) ) videoId.muted = settings.muteBkgVideo;
 
 			// Replay
 			if( settings.replayOnEnd ) videoId.loop = true;
 		}
-	};	
+	};
 
 	/**
 	*	Resize Callback
@@ -1911,7 +1911,7 @@
 
 	// Animation Preset Array
 	var animationPresetArray = {
-		
+
 		'fadeIn':'opacity: 0;easing: swing;',
 
 		// Slide in
@@ -1931,11 +1931,11 @@
 		'bounceInRight' : 'opacity:0;transX: 250px;easing:easeBounceIn;',
 		'bounceInDown' : 'opacity:0;transY: -250px;easing:easeBounceIn;',
 		'bounceInLeft' : 'opacity:0;transX: -250px;easing:easeBounceIn;',
-		
+
 		// Scale in
 		'scaleIn' : 'opacity:0;scale: 0.6;easing:easeFastSlow;',
 		'scaleOut' : 'opacity:0;scale: 1.4;easing:easeFastSlow',
-		
+
 		// Flips & Spins
 		'flipInX' : 'opacity:0;rotateX: -180deg;easing:easeFastSlow;',
 		'flipInY' : 'opacity:0;rotateY: -180deg;easing:easeFastSlow;',
@@ -1943,7 +1943,7 @@
 		'spinInY' : 'opacity:0;rotateY: -540deg;easing:easeFastSlow;',
 		'helicopterIn' : 'opacity:0;scale: 0.6;rotateZ: -360deg;easing:easeFastSlow;',
 		'helicopterOut' : 'opacity:0;scale: 1.4;rotateZ: -360deg;easing:easeFastSlow;',
-		
+
 		// Special
 		'signSwingTop' : 'opacity:0;rotateX:-60deg;transOrigX:top;transOrigY:center;easing:easeSwingInOut;',
 		'signSwingRight' : 'opacity:0;rotateY:-60deg;transOrigX:right;transOrigY:center;easing:easeSwingInOut;',
@@ -1961,19 +1961,19 @@
 
 	// Mobile Check
 	var mobile = false;
-	if( navigator.userAgent.match(/Android/i) || 
+	if( navigator.userAgent.match(/Android/i) ||
 		navigator.userAgent.match(/webOS/i) ||
-		navigator.userAgent.match(/iPhone/i) || 
+		navigator.userAgent.match(/iPhone/i) ||
 		navigator.userAgent.match(/iPad/i) ||
-		navigator.userAgent.match(/iPod/i) || 
-		navigator.userAgent.match(/BlackBerry/i) || 
+		navigator.userAgent.match(/iPod/i) ||
+		navigator.userAgent.match(/BlackBerry/i) ||
 		navigator.userAgent.match(/Windows Phone/i) ){
 			mobile = true;
 	}
 
 	// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
 	// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
-	// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel 
+	// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
 	// MIT license
 	(function() {
 		var lastTime = 0;
@@ -1986,7 +1986,7 @@
 		window.requestAnimationFrame = function( callback, element ) {
 				var currTime = new Date().getTime();
 				var timeToCall = Math.max( 0, 16 - ( currTime - lastTime ) );
-				var id = window.setTimeout( function() { callback(currTime + timeToCall); }, 
+				var id = window.setTimeout( function() { callback(currTime + timeToCall); },
 				timeToCall);
 				lastTime = currTime + timeToCall;
 				return id;
@@ -2026,11 +2026,11 @@
 		parallax: false,								// Parallax: boolean
 		easing: 'easeInOutQuint',						// Easing type: string, see easingArray
 		easingFallback: 'easeInOutQuint',				// Easing fallback: for older browser that do not support custom easing
-		speed: 700,										// Animation speed: milliseconds 
-		parallaxSpeed: 0.2,								// Parallax speed: decimal - 0.1-0.5 
+		speed: 700,										// Animation speed: milliseconds
+		parallaxSpeed: 0.2,								// Parallax speed: decimal - 0.1-0.5
 		parallaxScale: false,						// Parallax scale out: boolean - if slider should scale out of view
 		parallaxFadeOut: false,							// Parallax fade out:boolean - if slider should fade out of view
-		
+
 		// Navigation
 		navArrows: true,								// Arrow nav: boolean
 		navPagination: true,							// Pagination nav: boolean
@@ -2044,10 +2044,10 @@
 		fullscreen: false,								// Fullscreen slider: boolean
 		fsUseHeightOf: '',								// Whether in fullscreen mode the slider should use window height or parent height as reference. Useful when slider is used as background slider.
 		externalPadding: 0,								// External Padding: padding of wrapping container, use data-external-padding for individual sliders
-		scaleUnder: 1140,								// Width under which slider should scale if fullwidth is true							
+		scaleUnder: 1140,								// Width under which slider should scale if fullwidth is true
 		scaleMinHeight: 214,
 		captionScaling: true,							// Scale captions: boolean
-		
+
 		// Carousel
 		carousel: false,								// Carousel Slider: boolean
 		carouselVisible: 1,								// Carousel visible slides: integer
