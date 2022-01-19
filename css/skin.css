@@ -338,8 +338,15 @@ blockquote{
 		line-height: 1.2;
 	}
 	.text-small{
-		font-size: 1.1rem;
+		font-size: 2.4rem;
+		line-height: 1.2;
 	}
+
+	.text-xsmall{
+		font-size: 1.4rem;
+		line-height: 1.2;
+	}
+
 
 	.font-vertical-fix {
 	  position: relative;
