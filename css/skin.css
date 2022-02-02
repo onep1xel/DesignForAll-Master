@@ -588,14 +588,23 @@ body,
 	background-color: #D6D6CE;
 	border-color: #D6D6CE;
 }
-.border-sand,
+
+.border-sand{
+	border-color: #D6D6CE;
+}
+
 .border-hover-sand:hover{
 	border-color: #D6D6CE;
 }
-.color-sand,
+
+.color-sand{
+	color: #D6D6CE;
+}
+
 .color-hover-sand:hover{
 	color: #D6D6CE;
 }
+
 
 
 /* army */
