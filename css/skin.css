@@ -945,12 +945,12 @@ body,
 
 /* Initial Logo Width */
 .header .logo{
-	width: 17rem;
+	width: 24rem;
 }
 
 /* Compacted Header Logo Width */
 .header-compact .logo{
-	width: 17rem;
+	width: 24rem;
 }
 
 /* Initial Logo Styling */
